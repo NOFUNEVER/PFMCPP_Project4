@@ -115,9 +115,14 @@ float FloatType::multiply( float lhs, float rhs )
 }
 float FloatType::divide( float lhs, float rhs )
 {   
-    std::cout << "warning, floating point division by zero returns 'inf' !" << std::endl; 
+      if (rhs == 0.0f)
+        {
+            std::cout << std::endl <<"warning, floating point division by zero returns 'inf' !" << std::endl; 
+            return lhs / rhs;
+        }   
     return lhs / rhs;
 }
+
 struct  DoubleType
 {
     double add( double lhs, double rhs );
@@ -138,8 +143,12 @@ double DoubleType::multiply( double lhs, double rhs )
     return lhs * rhs;
 }
 double DoubleType::divide( double lhs, double rhs )
-{
-    std::cout << "warning, floating point division by zero returns 'inf' !" << std::endl;
+{   
+    if (rhs == 0.0)
+    {
+        std::cout << std::endl << "warning, floating point division by zero returns 'inf' !" << std::endl;
+        return lhs / rhs;
+    }
     return lhs / rhs;
 }
 
