@@ -116,10 +116,10 @@ float FloatType::multiply( float lhs, float rhs )
 float FloatType::divide( float lhs, float rhs )
 {   
     if (rhs == 0.0f)
-        {
-            std::cout << std::endl <<"warning, floating point division by zero returns 'inf' !" << std::endl; 
-            return lhs / rhs;
-        }   
+    {
+        std::cout << std::endl <<"warning, floating point division by zero returns 'inf' !" << std::endl; 
+        return lhs / rhs;
+    }   
     return lhs / rhs;
 }
 
